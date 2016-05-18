@@ -1,0 +1,30 @@
+<h2><%= @actor.name %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth Year</th>
+      <th>Photo</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @actor.name %></td>
+      <td><%= @actor.year_of_birth %></td>
+      <td><img src=<%= @actor.thumbnail %>alt=""></td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Movies:</h4>
+<% @actor.movies.each do |movie| %>
+<p><%= link_to movie.title, movie_path(movie) %></p>
+<% end %>
+
+<h3>Click <%= link_to 'here', edit_actor_path %> to edit the actor.
+</h3>
+
+<h3>Click <%= link_to 'here', actors_path %> to return to the list of actors.
+</h3>

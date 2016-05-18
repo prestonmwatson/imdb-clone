@@ -1,22 +1,16 @@
-<h2><%= @movie.title %></h2>
+<h1><%= @movie.title %></h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Summary</th>
-      <th>YouTube</th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <tr>
-      <td><%= @movie.title %></td>
-      <td><%= @movie.summary %></td>
-      <td><%= @movie.youtubelink.html_safe%></td>
-    </tr>
-  </tbody>
-</table>
+<p><%= @movie.youtubelink.html_safe%></p>
+
+
+<h3> Actors:
+  <% @movie.actors.each do |actor| %>
+  <%= link_to actor.name, actor_path(actor) %>
+  <% end %>
+</h3>
+
+<h4>Summary: <%= @movie.summary %></h4>
 
 <h3>Click <%= link_to 'here', edit_movie_path %> to edit the movie.
 </h3>
