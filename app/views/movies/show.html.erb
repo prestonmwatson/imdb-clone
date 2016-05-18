@@ -1,0 +1,25 @@
+<h2><%= @movie.title %></h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Summary</th>
+      <th>YouTube</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @movie.title %></td>
+      <td><%= @movie.summary %></td>
+      <td><%= @movie.youtubelink.html_safe%></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Click <%= link_to 'here', edit_movie_path %> to edit the movie.
+</h3>
+
+<h3>Click <%= link_to 'here', movies_path %> to return to the list of movies.
+</h3>
