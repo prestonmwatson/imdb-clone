@@ -1,0 +1,15 @@
+<h1>Welcome to IMDB Clone</h1>
+
+<% if current_user %>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <br>
+  Click <%= link_to 'here', movies_path %> to check out the list of our movies
+  <br>
+  Create a new movie by clicking <%= link_to 'here', new_movie_path %>
+<% end %>
+
+<h3>New User?</h3>
+<p>Click <%= link_to 'here', new_user_registration_path %> to create an account.</p>
+
+<h3>Already have an account?</h3>
+<p>Click <%= link_to 'here', new_user_session_path %> to log in.</p>
