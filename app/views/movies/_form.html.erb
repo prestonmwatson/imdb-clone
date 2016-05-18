@@ -4,23 +4,28 @@
   <%= f.label :title %>
   <%= f.text_field :title %>
 </p>
-
+<br>
 <p>
   <%= f.label :summary %>
   <%= f.text_field :summary %>
 
 </p>
-
+<br>
 <p>
   <%= f.label :youtubelink %>
   <%= f.text_field :youtubelink%>
 
 </p>
-
+<br>
 <p>
   <%= f.label :thumbnail %>
   <%= f.text_field :thumbnail %>
-
+</p>
+<br>
+<p>
+  <% Actor.all.each do |actor| %>
+  <%= check_box_tag 'movie[actor_ids][]', actor.id %> <%= actor.name %>
+  <% end %>
 </p>
 
 <%= f.submit %>

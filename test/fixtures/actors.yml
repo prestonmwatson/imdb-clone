@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  year_of_birth: 1
+  thumbnail: MyString
+  movie_id: 
+
+two:
+  name: MyString
+  year_of_birth: 1
+  thumbnail: MyString
+  movie_id: 
