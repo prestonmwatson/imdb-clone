@@ -1,0 +1,15 @@
+<%= form_for @review do |f| %>
+
+<p>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+</p>
+<br>
+<p>
+  <% Movie.all.each do |movie| %>
+  <%= check_box_tag 'movie[movie_ids][]', movie.id %> <%= movie.title %>
+  <% end %>
+</p>
+
+<%= f.submit %>
+<% end %>
